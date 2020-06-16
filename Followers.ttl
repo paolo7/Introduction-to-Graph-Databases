@@ -1,0 +1,11 @@
+prefix ex: <http://example.com/>
+
+ex:a0 ex:follows ex:c0 .
+ex:a0 ex:follows ex:b0 .
+ex:a0 ex:name "Adam" .
+ex:b0 ex:follows ex:a0 .
+ex:b0 ex:name "Bill" .
+ex:c0 ex:name "Cindy" .
+ex:c0 ex:follows ex:b1 .
+ex:b1 ex:name "Bill" .
+

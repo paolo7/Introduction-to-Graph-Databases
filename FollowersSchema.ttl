@@ -1,0 +1,8 @@
+prefix ex: <http://example.com/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+ex:name rdfs:domain ex:Person . 
+ex:follows rdfs:domain ex:Follower . 
+ex:follows rdfs:range ex:Person . 
+ex:Follower rdfs:subclassOf ex:Person . 
+
+

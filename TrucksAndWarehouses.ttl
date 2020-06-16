@@ -1,0 +1,62 @@
+prefix ex: <http://example.com/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ex:OwnTruck rdf:type ex:Truck . 
+ex:TruckAlpha rdf:type ex:Truck . 
+ex:TruckBeta rdf:type ex:Truck . 
+ex:OwnTruck rdfs:label "My Truck" . 
+ex:TruckAlpha rdfs:label "Adam’s Truck" . 
+ex:TruckAlpha ex:ownedBy ex:a0 . 
+ex:TruckBeta rdfs:label "Cindy’s Truck" . 
+ex:TruckBeta ex:ownedBy ex:c0 . 
+ex:warehouse1 rdf:type ex:Warehouse . 
+ex:warehouse2 rdf:type ex:Warehouse . 
+ex:warehouse3 rdf:type ex:Warehouse . 
+ex:warehouse4 rdf:type ex:Warehouse . 
+ex:warehouse5 rdf:type ex:Warehouse . 
+ex:warehouse1 rdfs:label "Amsterdam’s Depot" . 
+ex:warehouse2 rdfs:label "Berlin’s Store" . 
+ex:warehouse3 rdfs:label "Vienna’s Storehouse" . 
+ex:warehouse4 rdfs:label "Zurich’s Silo" . 
+ex:warehouse5 rdfs:label "Paris' Warehouse" . 
+ex:warehouse5 ex:connectedTo ex:warehouse4 . 
+ex:warehouse4 ex:connectedTo ex:warehouse5 . 
+ex:warehouse5 ex:connectedTo ex:warehouse1 . 
+ex:warehouse1 ex:connectedTo ex:warehouse5 .
+ex:warehouse2 ex:connectedTo ex:warehouse1 . 
+ex:warehouse1 ex:connectedTo ex:warehouse2 . 
+ex:warehouse3 ex:connectedTo ex:warehouse2 . 
+ex:warehouse2 ex:connectedTo ex:warehouse3 . 
+ex:warehouse4 ex:connectedTo ex:warehouse3 . 
+ex:warehouse3 ex:connectedTo ex:warehouse4 . 
+ex:warehouse4 ex:connectedTo ex:warehouse1 . 
+ex:warehouse1 ex:connectedTo ex:warehouse4 .
+ex:OwnTruck ex:hasLocation ex:l1 . 
+ex:l1 ex:warehouse ex:warehouse5 . 
+ex:l1 ex:day 1 . 
+ex:TruckAlpha ex:hasLocation ex:l2 . 
+ex:l2 ex:warehouse ex:warehouse2 . 
+ex:l2  ex:day 1  . 
+ex:TruckAlpha ex:hasLocation ex:l3 . 
+ex:l3 ex:warehouse ex:warehouse1 . 
+ex:l3 ex:day 2  . 
+ex:TruckAlpha ex:hasLocation ex:l4 . 
+ex:l4 ex:warehouse ex:warehouse5 . 
+ex:l4 ex:day 3  . 
+ex:TruckAlpha ex:hasLocation ex:l5 . 
+ex:l5 ex:warehouse ex:warehouse4 . 
+ex:l5  ex:day 4  . 
+ex:TruckBeta ex:hasLocation ex:l6 .
+ex:l6 ex:warehouse ex:warehouse4 . 
+ex:l6  ex:day 1  . 
+ex:TruckBeta ex:hasLocation ex:l7 . 
+ex:l7 ex:warehouse ex:warehouse3 . 
+ex:l7 ex:day 2  . 
+ex:TruckBeta ex:hasLocation ex:l8 . 
+ex:l8 ex:warehouse ex:warehouse3 . 
+ex:l8 ex:day 3  . 
+ex:TruckBeta ex:hasLocation ex:l9 . 
+ex:l9 ex:warehouse ex:warehouse3 . 
+ex:l9 ex:day 4  . 
+
+
